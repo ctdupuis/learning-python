@@ -4,6 +4,7 @@ age = 10 + 15
 print("name: " + name)
 print("age: " + str(age))
 
+
 ## Booleans
 # True and False must be capitalized
 truthy = True
@@ -19,6 +20,7 @@ True is True #=> True
 "True" is True #=> False
 "True" is str(True) #=> True
 
+
 ## Lists 
 # Lists are just Arrays
 
@@ -27,6 +29,7 @@ print(entertainment[1])
 
 numbers = [1,2,3]
 print(numbers[0])
+
 
 ## Dictionaries
 # Dictionaries are Hashes or Objects
@@ -43,6 +46,7 @@ myself = {
 
 print(myself["name"]["last"])
 print(myself["age"])
+
 
 ## Built-in Functions
 
@@ -70,6 +74,7 @@ sorted([2,3,1])
 # Numbers get first priority, then capital letters, then lowercase letters
 sorted(["a", "B", "C", "d", "5", "6.5"]) 
 
+
 ## Defining Functions
 
 # Define function
@@ -95,3 +100,54 @@ def print_people(*people):
         print("This person is", person)
 
 print_people("Cody", "Miah")
+
+
+## Return values
+
+def do_math(num1, num2):
+    return num1 + num2
+
+math1 = do_math(1, 3) #=> 4
+
+
+## If Statements
+
+check = False
+
+if check == False:
+    print("It is False")
+elif check == True: 
+    print("It is actually True")
+else: 
+    print("It is not a Boolean")
+
+
+## Loops
+
+# For
+numbers = [1,2,3]
+
+for number in numbers:
+    print(number)
+
+# While
+run = True
+current = 1
+
+while run:
+    if current == 100:
+        run = False
+    else:
+        print(current)
+        current += 1
+
+
+## Importing Libraries
+
+# re is a regex library
+import re
+
+string = "'I AM NOT YELLING', she said. Though we knew it not to be true"
+
+# Replace all capital letters, punctuation, and whitespace
+new_string = re.sub('[A-Z./,+" "]', '', string)
